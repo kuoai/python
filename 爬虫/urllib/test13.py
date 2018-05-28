@@ -10,3 +10,4 @@ except urllib.error.URLError as e:
         print("Time out")
 
 # reason属性的结果是socket.timeout类,isinstance()方法来判断它的类型
+

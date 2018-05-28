@@ -6,6 +6,7 @@ response = urllib.request.urlopen(request)
 print(response.read().decode("utf8"))
 
 
+
 # request的请求参数
 # class urllib.request.Request(url, data=None, headers={}, origin_req_host=None, unverifiable=False, method=None)
 # 第一个参数url用于请求url，这是必传参数

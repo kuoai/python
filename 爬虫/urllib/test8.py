@@ -14,6 +14,7 @@ except URLError as e:
     print(e.reason)
 
 
+
 # 本地搭建一个代理，运行在9743端口上
 # 这里使用了ProxyHandler，其参数是一个字典，键名是协议类型（比如HTTP或者HTTPS等），键值是代理链接，可以添加多个代理。
 # 然后，利用这个Handler及build_opener()方法构造一个Opener，之后发送请求即可。
