@@ -1,21 +1,27 @@
-# -*- coding: utf-8 -*-
 import pymysql
-db = pymysql.connect("localhost", "root", "123456", "abc")
-cursor = db.cursor()
-cursor.execute("DROP TABLE IF EXISTS info01")
-sql="""CREATE TABLE `info01` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `salary` int(255) NOT NULL,
-  `position` varchar(255) NOT NULL,
-  `time` varchar(255) NOT NULL,
-  `grade` varchar(255) NOT NULL,
-  `company` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=498 DEFAULT CHARSET=utf8;"""
-cursor.execute(sql)
+# 查询操作
 
+# 打开数据库
+db = pymysql.connect(host="127.0.0.1",user="root",password="123456",db="hmh")
 
-# 关闭数据库
-db.close()
+# 使用cursor()方法获取操作游标
+cur = db.cursor()
 
+# 1.查询操作
+# 编写sql查询语句， user对应表名
+sql = "select * from user"
+try:
+    cur.execute(sql)        #执行sql语句
+    results = cur.fetchall()        #获取查询的所有记录
+    print("id","username","area")
+
+    # 遍历结果
+    for row in results:
+        id = row[0]
+        name = row[1]
+        area = row[2]
+        print(id,name,area)
+except Exception as e:
+    raise e
+finally:
+    db.close()      #关闭数据库
