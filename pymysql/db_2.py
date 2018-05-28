@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# 插入一条数据
 import pymysql
 db=pymysql.connect("localhost","root","123456","hmh")
 cursur=db.cursor()

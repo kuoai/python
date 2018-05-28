@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# 连接数据库，创建一个表，名字为EMPLOYEE，定义字段
 import pymysql
 db=pymysql.connect("localhost","root","123456","hmh")
 cursur=db.cursor()
