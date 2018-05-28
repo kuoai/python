@@ -1,2 +1,4 @@
 # python
-# 包括链接数据库，操数据库，爬网页数据，启动本地服务，login，web api
+# 数据库连接，操作数据库，增删改查
+# WEB API
+# urllib，bs4
