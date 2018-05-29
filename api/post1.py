@@ -3,6 +3,7 @@
 
 # 封装成无参数传入的接口
 from flask import Flask,jsonify,request
+from flask import *
 data = {
     "anna":{
         "age": 24,
@@ -24,6 +25,13 @@ app = Flask(__name__)
 # 函数名字任意取
 def get_user():
     return jsonify(data)       #把字典转成json串返回
+
+
+@app.route("/")
+def index():
+    return render_template('a.html')
+
+
 
 app.run(host="10.10.11.121",port=8080,debug=True)
 
