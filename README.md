@@ -1,4 +1,4 @@
 # python
-# 数据库连接，操作数据库，增删改查
+# pymysql.connect insert,delete,update,select
 # WEB API
-# urllib，bs4
+# urllib bs4
