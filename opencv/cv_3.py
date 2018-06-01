@@ -16,7 +16,6 @@ data = json.loads(r.text)       #返回json
 print(data)
 print(data["faces"][0]["face_token"])
 
-
 # #####创建人脸集合，并加入face_token
 # url = "https://api-cn.faceplusplus.com/facepp/v3/faceset/create"
 # payload = {
