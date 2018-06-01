@@ -17,7 +17,6 @@ import requests
 # print(data["faces"][0]["face_token"])
 
 
-
 # #####创建人脸集合，并加入face_token
 url = "https://api-cn.faceplusplus.com/facepp/v3/faceset/create"
 payload = {
