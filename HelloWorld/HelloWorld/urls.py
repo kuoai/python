@@ -1,9 +1,10 @@
 from django.conf.urls import url
 
-from . import view,search
+from . import view,search,search_post
 
 urlpatterns = [
     url(r'^hello$', view.hello),
     url(r'^search_form$', search.search_form),
     url(r'^search$', search.search),
+    url(r'^search_post$',search_post.search_post)
 ]
