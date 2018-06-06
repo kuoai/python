@@ -13,6 +13,7 @@ urlpatterns = [
     url(r"^home$", learn_views.home),
     url(r"^homeTest$",learn_views.homeTest),
     url(r'^form',learn_views.form),
+    url(r'^ajax$', learn_views.ajax)
 
     # url(r'^admin/', admin.site.urls),
 ]

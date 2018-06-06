@@ -54,3 +54,7 @@ def form(request):
 #     else:
 #         form = AddForm()
 #     return render(request, "form.html", {"form": form})
+
+
+def ajax(request):
+    return render(request, "ajax.html")
