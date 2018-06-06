@@ -20,10 +20,19 @@ def add2(request,a,b):
 
 # 使用模板
 def index(request):
-    return render(request,"home.html")
+    return render(request,"index.html")
 
 # 跳转函数
 def old_add2_redirect(request,a,b):
     return HttpResponsePermanentRedirect(
         reverse("add2",args=(a,b))
     )
+
+def home(request):
+    # list = ["java","html","js","css","python"];
+    # list = {"site": u"百度", "content": u"百度一下，你就知道"};
+    list = map(str,range(100))
+    return render(request, "home.html",{"list": list})
+
+def homeTest(request):
+    return render(request,"homeTest.html")

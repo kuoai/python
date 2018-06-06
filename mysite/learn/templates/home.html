@@ -1,11 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <!--<a href="/add/?a=4&b=5">计算4+5</a>-->
-    <a href="{% url 'add2' 4 5 %}">link</a>
-</body>
-</html>
+{% for i in list %}
+    <span style="color:pink">{{i}}</span>
+    {% if not forloop.last %},{% endif %}
+    <!--用变量 forloop.last 这个变量，如果是最后一项其为真，否则为假-->
+{% endfor %}
+
+<p>{{request.user}}</p>
+{% if request.user.is_authenticated %}
+<p>{{request.user.username}},hello!</p>
+{% else %}
+请登陆
+{% endif %}
+
+
+
+<p>{{request.path}}</p>
+
+
+
+<!--循环-->
+<!--列表:-->
+<!--{% for i in list %}-->
+<!--{{ i }}-->
+<!--{% endfor %}-->
+
+<!--显示字典内容-->
+<!--站点:{{list.site}}-->
+<!--内容:{{list.content}}-->
+<!--{% for key,value in list.items %}-->
+    <!--{{key}}:{{value}}-->
+<!--{% endfor %}-->
+
+
