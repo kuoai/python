@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.http import HttpResponsePermanentRedirect
 from django.urls import reverse
 
+# from .forms import AddForm
+
 
 # 第一种方法采用 /add/?a=4&b=5 这样GET方法进行
 def add(request):
@@ -36,3 +38,19 @@ def home(request):
 
 def homeTest(request):
     return render(request,"homeTest.html")
+
+def form(request):
+    return render(request, "form.html")
+
+
+# 使用django自带的form提交的表单
+# def index(request):
+#     if request.method == "POST":
+#         form = AddForm(request.POST)
+#         if form.is_valid():     #如果提交的数据合法
+#             a = form.cleaned_data["a"]
+#             b = form.cleaned_data["b"]
+#             return HttpResponse(str(int(a) + int(b)))
+#     else:
+#         form = AddForm()
+#     return render(request, "form.html", {"form": form})
