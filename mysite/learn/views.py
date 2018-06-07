@@ -5,9 +5,7 @@ from django.urls import reverse
 from django.shortcuts import redirect
 # 引入models模块
 from . import models
-
-# from .forms import AddForm
-
+from captcha.fields import CaptchaField
 
 # 第一种方法采用 /add/?a=4&b=5 这样GET方法进行
 # def add(request):
@@ -56,6 +54,7 @@ def index(request):
 
 def login(request):
     if request.method == "POST":
+
         username = request.POST.get("username",None)
         password = request.POST.get("password",None)
         message = "所有字段都必须填写！"

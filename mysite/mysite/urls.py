@@ -1,7 +1,7 @@
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
 from learn import views as learn_views  # new
-# from login import views
+
 
 
 urlpatterns = [
@@ -19,7 +19,5 @@ urlpatterns = [
     url(r'^index/', learn_views.index),
     url(r'^login/', learn_views.login),
     url(r'^register/', learn_views.register),
-    url(r'^logout/', learn_views.logout)
-
-
+    url(r'^logout/', learn_views.logout),
 ]
